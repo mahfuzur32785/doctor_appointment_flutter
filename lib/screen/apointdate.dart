@@ -278,42 +278,56 @@ class _AppointmentDateState extends State<AppointmentDate> {
 
 
             SizedBox(height: 10,),
-            Padding(
-                padding:  EdgeInsets.symmetric(horizontal: 20.0),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Color(0xFFfd8311),
-
-                    borderRadius: BorderRadius.circular(50),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.6),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset: Offset(0, 4), // changes position of shadow
-                      ),
-                    ],),
-
-                  padding: EdgeInsets.symmetric(vertical: 10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+            Container(
+              height: 80,
+              color: Colors.white,
+              child: Padding(
+                  padding:  EdgeInsets.symmetric(horizontal: 15.0),
+                  child: Column(
                     children: [
-                      Text(
-                          "Pay & Confirm",
-                          style: TextStyle(
-                              color: Color(0xFFfce1c9),
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500
-                          )),
-                    ],),
-                )),
-            SizedBox(height: 2,),
-            Divider(
-                indent: 150,
-                endIndent: 150,
-                height: 20,
-                thickness: 5,
-                color: Colors.black26),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 10.0),
+                        child: Container(
+
+                          decoration: BoxDecoration(
+                            color: Color(0xFFfd8311),
+
+                            borderRadius: BorderRadius.circular(50),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.grey.withOpacity(0.6),
+                                spreadRadius: 5,
+                                blurRadius: 7,
+                                offset: Offset(0, 4), // changes position of shadow
+                              ),
+                            ],),
+
+                          padding: EdgeInsets.symmetric(vertical: 10),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                  "Pay & Confirm",
+                                  style: TextStyle(
+                                      color: Color(0xFFfce1c9),
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w500
+                                  )),
+                            ],),
+                        ),
+                      ),
+                      Divider(
+                          indent: 150,
+                          endIndent: 150,
+                          height: 10,
+                          thickness: 5,
+                          color: Colors.black26),
+                    ],
+
+                  ),
+              ),
+            ),
+
           ]),
         ),
       ),
