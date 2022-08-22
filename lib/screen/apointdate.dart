@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:doctor_appointment/screen/doctorpage.dart';
 import 'package:flutter/material.dart';
 
 class AppointmentDate extends StatefulWidget {
@@ -17,9 +18,15 @@ class _AppointmentDateState extends State<AppointmentDate> {
       backgroundColor: Colors.grey.shade300,
       appBar: AppBar(
         toolbarHeight: 100,
-        leading: Icon(
-          Icons.arrow_back_ios,
-          color: Colors.white,
+        leading: InkWell(
+          onTap: (){
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) =>
+                DoctorPage()));},
+          child: Icon(
+            Icons.arrow_back_ios,
+            color: Colors.white,
+          ),
         ),
         title:  Text(
           "APPOINTMENT",
